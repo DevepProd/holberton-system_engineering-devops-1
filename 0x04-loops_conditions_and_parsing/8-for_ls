@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#   Only displays the part of the name after the first dash. 
+
+list=$(ls)
+for index in $list;
+do
+  echo "$index" | cut -d '-' -f2
+done
