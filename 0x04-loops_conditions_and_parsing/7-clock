@@ -1,26 +1,16 @@
 #!/usr/bin/env bash
 #This prints Holberton School 10 times with while
-hour=0
+hours=0
 minutes=1
 
-while [ "$count" -le 12 ]; 
+while [ "$hours" -le 12 ]; 
 do
-	while [ "$count" -le 12 ]; 
+	echo "Hour: $hours"
+	while [ "$minutes" -le 59 ]; 
 	do
-	case $count in 
-		4)
-			echo "bad luck from China"
-			;;
-		9)
-			echo "bad luck from Japan"
-			;;
-		17)
-			echo "bad luck from Italy"
-			;;
-		*)
-			echo "Holberton School"
-			;;
-		esac
-	((count++))
+		echo $minutes
+		((minutes++))
 	done
+	minutes=1
+	((hours++))
 done
