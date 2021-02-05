@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 #This prints Holberton School 10 times with while
 count=1
-while [ "$count" -lt 10 ]; 
+while [ "$count" -le 10 ]; 
 do
-	echo "Holberton School"
-	((count++))
 	if [ "$count" -eq 9 ]
 	then
 		echo "Hi"	
+	else
+		echo "Holberton School"
+		
 	fi
+	((count++))
 done
