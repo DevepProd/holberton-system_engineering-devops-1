@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 #This prints Holberton School 10 times with while
-count=1
-while [ "$count" -le 20 ]; 
+hour=0
+minutes=1
+
+while [ "$count" -le 12 ]; 
 do
+	while [ "$count" -le 12 ]; 
+	do
 	case $count in 
 		4)
 			echo "bad luck from China"
@@ -14,8 +18,9 @@ do
 			echo "bad luck from Italy"
 			;;
 		*)
-			echo $count
+			echo "Holberton School"
 			;;
 		esac
 	((count++))
+	done
 done
