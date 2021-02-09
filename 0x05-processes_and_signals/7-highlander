@@ -7,7 +7,7 @@
 trap controlC SIGTERM
 function controlC()
 {
-	echo "I am invincible!!!"
+	echo I am invincible!!!
 }
 
 while true 
