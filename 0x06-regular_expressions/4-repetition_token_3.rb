@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 #This script is to find the repetitiones token about a strin
-#The plus sign + indicates that the preceding character must appear at least once. 
-#For example, "ho + la" describes the infinite set hello, hello, hooola, hoooola, and so on.
+#Any number of the preceding character is allowed (e.g. .* will match any 
+#single-line string, including an empty string, and gets used a lot)
 puts ARGV[0].scan(/^hbt*n$/).join
