@@ -1,10 +1,10 @@
 # System Engineering and DevOps 
 
-# Introduction 
+## Introduction 
 This repository contains information and task done about shell basic permisions, redirections, variables expansions, loops and conditions, regular exprexions, and about networking basics, basic and advanced commands used in linux
 <br/>
 
-
+## Description About the Directories 
 | DIRECTORY | DESCRIPCION | README |
 | --- | --- | --- |
 |  [0x00-shell_basics](https://github.com/AndresSern/holberton-system_engineering-devops/tree/master/0x00-shell_basics)| It was createad to **difference between terminal and a shell**, and learned about **shell prompt**: **commands** --> **cd**, **pwd**, **ls**, **less**, **file**, **ln**, **rm**, **mkdir**, **file**, **less**, **ln**, **man**, **help**, **type**, **which**, **cp**, **mv**, **touch**   |  [README.md](https://github.com/AndresSern/holberton-system_engineering-devops/blob/master/0x00-shell_basics/README.md)|
@@ -17,6 +17,31 @@ This repository contains information and task done about shell basic permisions,
 |  [0x07-networking_basics](https://github.com/AndresSern/holberton-system_engineering-devops/tree/master/0x07-networking_basics)| It was created to learn about **OSI Model**, **different types of network**, **lan**, **Wan** , **Internet**, **TCP/UDP** and **IP**, **localhost**, **MAC address**, **command** --> **netstat**, **ping**|  [README.md](https://github.com/AndresSern/holberton-system_engineering-devops/blob/master/0x07-networking_basics/README.md)|
 |  [0x08-networking_basics_2](https://github.com/AndresSern/holberton-system_engineering-devops/tree/master/0x08-networking_basics_2)| It was created to learn about what is a **localhost**, **0.0.0.0**, **hosts file**, **Netcat**, **command** --> **ifconfig**, **telnet**, **nc**, **cut**|  [README.md](https://github.com/AndresSern/holberton-system_engineering-devops/blob/master/0x08-networking_basics_2/README.md)|
 
+
+## Installation  and Prerequisites
+
+### Prerequisites
+
+What things you need to install
+- **Ubuntu 14.04 LTS** on a Vagrant (Virtualbox) enviroment 
+- **Ruby 2.7.1** or less to run files ruby 
+- **shellcheck** to check the style to files bash
+- **Git** to clone the repository
+
+```
+Give examples
+```
+### Installation
+In your terminal, git clone the directory with the following command:
+
+```sh
+git clone https://github.com/AndresSern/holberton-system_engineering-devops.git/
+```
+## Usage 
+
+```sh
+./[executable file]
+```
 
 ## Environment
 
