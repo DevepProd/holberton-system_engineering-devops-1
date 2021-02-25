@@ -1,4 +1,8 @@
-# holberton-system_engineering-devops
+# System Engineering and DevOps 
+
+# Introduction 
+This repository contains information and task done about shell basic permisions, redirections, variables expansions, loops and conditions, regular exprexions, and about networking basics, basic and advanced commands used in linux
+<br/>
 
 
 | DIRECTORY | DESCRIPCION | README |
@@ -12,3 +16,10 @@
 |  [0x06-regular_expressions](https://github.com/AndresSern/holberton-system_engineering-devops/tree/master/0x06-regular_expressions)| It was created to learn about how to use **regular expression** (regex) to do a **secuence of characteres that makes up a search pattern** in files or result of a command |  [README.md](https://github.com/AndresSern/holberton-system_engineering-devops/blob/master/0x06-regular_expressions/README.md)|
 |  [0x07-networking_basics](https://github.com/AndresSern/holberton-system_engineering-devops/tree/master/0x07-networking_basics)| It was created to learn about **OSI Model**, **different types of network**, **lan**, **Wan** , **Internet**, **TCP/UDP** and **IP**, **localhost**, **MAC address**, **command** --> **netstat**, **ping**|  [README.md](https://github.com/AndresSern/holberton-system_engineering-devops/blob/master/0x07-networking_basics/README.md)|
 |  [0x08-networking_basics_2](https://github.com/AndresSern/holberton-system_engineering-devops/tree/master/0x08-networking_basics_2)| It was created to learn about what is a **localhost**, **0.0.0.0**, **hosts file**, **Netcat**, **command** --> **ifconfig**, **telnet**, **nc**, **cut**|  [README.md](https://github.com/AndresSern/holberton-system_engineering-devops/blob/master/0x08-networking_basics_2/README.md)|
+
+
+## Environment
+
+- Language: Ruby 3.0 script, Bash script  
+- OS: Ubuntu 14.04 LTS
+- Style guidelines: shellcheck to check if the style in files bash is correct
