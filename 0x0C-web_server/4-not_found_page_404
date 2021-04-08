@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Configure your Nginx server so that /redirect_me is redirecting to another page.
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo 'Holberton School!' > /var/www/html/index.html
+sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://github.com/AndresSern permanent;" /etc/nginx/sites-available/default
+sudo service nginx restart
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sudo sed -i "/server_name _;/a error_page 404 /404.html;" /etc/nginx/sites-available/default
+sudo service nginx restar
