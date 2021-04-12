@@ -16,6 +16,6 @@ echo "Ceci n'est pas une page" > 404.html
 mv 404.html /var/www/html/
 
 sudo sed -i "/server_name _;/a error_page 404 /404.html;" /etc/nginx/sites-available/default
-sudo service nginx restart
 
 sudo -i "/server_name _/ a\\\tadd_header X-Served-By \"\$HOSTNAME\";" /etc/ngnix/sites-available/default
+sudo service nginx restart
