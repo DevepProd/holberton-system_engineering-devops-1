@@ -3,16 +3,16 @@
 sudo apt-get -y update
 sudo apt-get -y install haproxy
 
-cat "
+echo "
 frontend ourwbsitefrontend
-	bind *:80
-	mode http 
-	default_backend ourwebsitendpoint
+        bind *:80
+        mode http 
+        default_backend ourwebsitendpoint
 
 backend ourwebsitendpoint
-	balance roundrobin
-	option forwardfor
-	server 2207-web-01 34.75.224.91:80 check
-	server 2207-web-02 3.87.81.24:80  check" >> /etc/haproxy/haproxy.cfg
+        balance roundrobin
+        option forwardfor
+        server 2207-web-01 34.75.224.91:80 check
+        server 2207-web-02 3.87.81.24:80  check" >> /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
