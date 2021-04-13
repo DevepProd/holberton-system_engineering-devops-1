@@ -12,9 +12,6 @@ frontend ourwbsitefrontend
 backend ourwebsitendpoint
 	balance roundrobin
 	option forwardfor
-	http-request set-header X-Forwarded-Port %[dst_port]
-	http-request add-header X-Forwarded-Proto https if { ssl_fc }
-	option httpchk HEAD / HTTP/1.1\r\nHost:localhost
 	server 2207-web-01 34.75.224.91:80 check
 	server 2207-web-02 3.87.81.24:80  check" >> /etc/haproxy/haproxy.cfg
 
