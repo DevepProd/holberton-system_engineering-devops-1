@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # Configure your Nginx server so that /redirect_me is redirecting to another
-
 sudo apt-get -y update
-sudo apt-get -y install  haproxy -y
-printf "
+sudo apt-get -y install haproxy
 
+cat "
 frontend ourwbsitefrontend
 	bind *:80
 	mode http 
@@ -17,6 +16,6 @@ backend ourwebsitendpoint
 	http-request add-header X-Forwarded-Proto https if { ssl_fc }
 	option httpchk HEAD / HTTP/1.1\r\nHost:localhost
 	server 2207-web-01 34.75.224.91:80 check
-	server 2207-web-02 3.87.81.24:80  check
-" >> /etc/haproxy/haproxy.cfg
+	server 2207-web-02 3.87.81.24:80  check" >> /etc/haproxy/haproxy.cfg
+
 sudo service haproxy restart
