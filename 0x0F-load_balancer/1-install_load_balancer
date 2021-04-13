@@ -19,3 +19,4 @@ backend ourwebsitendpoint
 	server 2207-web-01 34.75.224.91:80 check
 	server 2207-web-02 3.87.81.24:80  check
 " >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
