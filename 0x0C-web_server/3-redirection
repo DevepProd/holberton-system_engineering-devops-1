@@ -3,5 +3,5 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo 'Holberton School!' > /var/www/html/index.html
-sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://github.com/AndresSern permanent;" /etc/nginx/sites-available/default
+sudo sed -i "/listen 80 default_server;/a\\\trewrite ^/redirect_me https://github.com/AndresSern permanent;" /etc/nginx/sites-available/default
 sudo service nginx restart
