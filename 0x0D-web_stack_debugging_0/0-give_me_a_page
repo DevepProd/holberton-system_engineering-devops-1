@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+# INstall Apache to run on the container a page Hello HOlberton
+sudo service apache2 start
