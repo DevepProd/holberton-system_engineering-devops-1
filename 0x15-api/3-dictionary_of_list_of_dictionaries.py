@@ -14,8 +14,8 @@ if __name__ == "__main__":
         tasks = requests.get((url + "todos/?userId=%s") % user_id).json()
         for my_tasks in tasks:
             myJsonDict[user_id].append({"username": employee["username"],
-                                    "task": my_tasks["title"],
-                                    "completed": my_tasks["completed"]})
+                                        "task": my_tasks["title"],
+                                        "completed": my_tasks["completed"]})
 
     with open("todo_all_employees.json", "w") as jsonfile:
         jsonfile.write((json.dumps(myJsonDict)))
