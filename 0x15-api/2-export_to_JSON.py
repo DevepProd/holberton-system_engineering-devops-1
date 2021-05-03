@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-""" Python script to export data in the JSON FORMAT """
-import requests
-from sys import argv
-import json
+"""
+Python script to export data in the JSON FORMAT
+    - REcords all tasks from all employees
+"""
 
 if __name__ == "__main__":
+    import requests
+    from sys import argv
+    import json
+
     user_id = argv[1]
     url = "https://jsonplaceholder.typicode.com/"
     user = requests.get((url + "users/%s") % user_id).json()
