@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-""" Python script to export data in the CSV Format """
-import requests
-from sys import argv
-import csv
+"""
+Python script to export data in the CSV Format
+    Records all tasks that are owned by this employee
+"""
 
 if __name__ == "__main__":
+    import requests
+    from sys import argv
+    import csv
     user_id = argv[1]
 
     url = "https://jsonplaceholder.typicode.com/"
