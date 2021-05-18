@@ -7,15 +7,15 @@ import requests
 
 
 def recurse(subreddit, hot_list=[], after=''):
-    """ Function that queries Reddit API and returns a list
-    containing the titles of all hot articles for a given subreddit """
+    """Function that queries Reddit API and returns a list
+    containing the titles of all hot articles for a given subreddit"""
     header = {"User-Agent": "User"}
     url = ('https://www.reddit.com/r/{}/hot.json?after={}'.format(
            subreddit, after))
-    req = requests.get(url, headers=header, allow_redirects=False).json()
+    req = requests.get(url, headers=header, allow_redirects=False)
     if req.status_code == 200:
-        hot_list += req.get("data").get("children")
-        after_aux = req.get("data").get("after")
+        hot_list += req.json().get("data").get("children")
+        after_aux = req.json().get("data").get("after")
         if after_aux:
             return recurse(subreddit, hot_list=hot_list, after=after_aux)
         else:
