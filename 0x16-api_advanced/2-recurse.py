@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module with top_ten function"""
+"""
+Module with top_ten function
+"""
 
 import requests
 
@@ -8,7 +10,6 @@ def recurse(subreddit, hot_list=[], after=''):
     """Function that queries Reddit API and returns a list
     containing the titles of all hot articles for a given subreddit"""
     header = {"User-Agent": "User"}
-    param = {'after': after}
     url = ('https://www.reddit.com/r/{}/hot.json?after={}'.format(
            subreddit, after))
     req = requests.get(url, headers=header, allow_redirects=False)
@@ -19,3 +20,5 @@ def recurse(subreddit, hot_list=[], after=''):
             return recurse(subreddit, hot_list=hot_list, after=after_aux)
         else:
             return hot_list
+    else:
+        return None
