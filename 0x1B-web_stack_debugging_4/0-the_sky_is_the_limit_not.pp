@@ -7,9 +7,11 @@ exec {'Unlimit Request':
 
 exec {'restart nginx':
     command => 'sudo service nginx restart',
-    path    => ['/bin', '/sbin', 'usr/bin', '/usr/sbin'],
-}
+    path    => '/usr/bin',
+} ~>
 
 service {'nginx':
     ensure  => running,
 }
+
+
