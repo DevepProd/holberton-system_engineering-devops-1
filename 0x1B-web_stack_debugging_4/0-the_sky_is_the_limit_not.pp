@@ -1,17 +1,13 @@
 # Sky is the limit, let's bring that limit higher mandatory
 # Puppet to fix limit number request to unlimit number request with nginx
-exec {'Unlimit Request':
+exec { 'find and correct':
     command => "sed -i 's/ULIMIT=/# ULIMIT=/g' /etc/default/nginx",
-    path    => ['/bin', '/sbin', '/usr/bin', '/usr/sbin'],
+    path    => [ '/usr/bin' , '/bin', '/usr/sbin', '/sbin' ],
 }
-
-exec {'restart nginx':
+exec { 'restart nginx':
     command => 'sudo service nginx restart',
     path    => '/usr/bin',
 } ~>
-
-service {'nginx':
-    ensure  => running,
+service { 'nginx':
+    ensure    => running,
 }
-
-
