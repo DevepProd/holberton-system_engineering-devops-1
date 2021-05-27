@@ -2,7 +2,7 @@
 # Puppet to fix limit number request to unlimit number request with nginx
 exec {'Unlimit Request':
     command => "sed -i 's/ULIMIT=/# ULIMIT=/g' /etc/default/nginx",
-    path    => ['/bin', '/sbin', 'usr/bin', '/usr/sbin'],
+    path    => ['/bin', '/sbin', '/usr/bin', '/usr/sbin'],
 }
 
 exec {'restart nginx':
